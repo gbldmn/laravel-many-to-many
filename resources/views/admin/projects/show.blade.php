@@ -12,19 +12,19 @@
     <h2>type</h2>
     @if($project->type)
     <div>nome:{{ $project->type->name }} </div>
-    <div>slug:{{ $project->slug }}</div>
+    <div>slug:{{ $project->type->slug }}</div>
     @endif
 
     <h2>technologies</h2>
-    {{-- @if($project->technologies)
+    @if($project->technologies)
     @foreach($project->technologies as $elem)
     <div>technology name: {{ $elem->name }}</div> 
     @endforeach
     @endif
-    --}}
+   
     @php
         // non riesco ad ottenere i record
-        dd($project->technologies)
+        // dd($project->technologies)
     @endphp
 
 
