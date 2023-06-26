@@ -79,6 +79,10 @@ class ProjectController extends Controller
 
         $new_project->save();
 
+        // per le checkbox
+        if($request->has('technologies')){
+            $new_project->technologies()->attach($request->technologies);
+        }
 
 
          return redirect()->route('project.index');
