@@ -169,6 +169,11 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+
+        $project->technologies()->sync( [] );
+
+
+
         if($project->cover_image ){
             Storage::delete($project->cover_image);
         }
