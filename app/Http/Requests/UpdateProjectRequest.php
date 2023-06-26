@@ -28,7 +28,8 @@ class UpdateProjectRequest extends FormRequest
                 'title' => ['required' ],
                 'content' => ['required'],
                 'slug' => ['required'],
-                'cover_image' => ['required']
+                'cover_image' => ['required'],
+                'technologies' => ['required']
         
         ];
     }
